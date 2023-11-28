@@ -69,7 +69,7 @@
       <th scope="col"></th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="align-middle">
     <tr th:each="models : ${allModels}">
       <td th:text="${models.name}"></td>
       <td th:text="${models.brandName}"></td>
@@ -80,7 +80,9 @@
       <td th:text="${models.modified}"></td>
       <td><img th:src="${models.imageURL}" alt="Фото" width="300" height="200"></td>
       <td>
-        <button type="button" class="btn btn-primary">Edit</button>
+        <div class="align-bottom"><a class="btn btn-danger align-bottom"
+                                     th:href="@{/models/modelDelete/{name}(name=${models.name})}">Delete Model</a>
+        </div>
       </td>
     </tr>
     </tbody>

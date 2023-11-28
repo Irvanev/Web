@@ -72,7 +72,7 @@
             <th scope="col"></th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="align-middle">
         <tr th:each="offer : ${allOffers}">
             <td th:text="${offer.modelName}"></td>
             <td th:text="${offer.userName}"></td>
@@ -84,9 +84,9 @@
             <td th:text="${offer.description}"></td>
             <td th:text="${offer.created}"></td>
             <td th:text="${offer.modified}"></td>
-            <td><img th:src="${offer.imageURL}" alt="Фото" width="300" height="200"></td>
+            <td><img th:src="${offer.imageURL}" alt="Photo" width="300" height="200"></td>
             <td>
-                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Edit</button>
             </td>
         </tr>
         </tbody>
@@ -95,7 +95,7 @@
 
 <div class="container-md d-flex justify-content-center">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add Model
+        Add Offer
     </button>
 
     <!-- Modal -->
@@ -195,7 +195,7 @@
                             </div>
                             <div class="form-check disabled">
                                 <label class="form-check-label">
-                                    <input th:field="*{engineEnum}"
+                                    <input th:field="*{transmissionEnum}"
                                            th:value="AUTOMATIC"
                                            th:errorclass="is-invalid"
                                            type="radio" class="form-check-input" name="transmissionEnum"/>

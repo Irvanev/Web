@@ -62,7 +62,7 @@
             <th scope="col"></th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="align-middle">
         <tr th:each="roles : ${allRoles}">
             <td th:text="${roles.roleEnum}"></td>
 
@@ -76,7 +76,7 @@
 
 <div class="container-md d-flex justify-content-center">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add Model
+        Add Role
     </button>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

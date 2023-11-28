@@ -35,4 +35,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll().stream().map(users -> modelMapper.map(users, UserDto.class))
                 .collect(Collectors.toList());
     }
+    public void removeUser(String userName) {
+        userRepository.deleteByUserName(userName);
+    }
 }

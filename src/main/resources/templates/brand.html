@@ -64,14 +64,16 @@
       <th scope="col"></th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="align-middle">
     <tr th:each="brand : ${brands}">
       <td th:text="${brand.name}"></td>
       <td th:text="${brand.created}"></td>
       <td th:text="${brand.modified}"></td>
 
       <td>
-        <button type="button" class="btn btn-primary">Edit</button>
+        <div class="align-bottom"><a class="btn btn-danger align-bottom"
+                                     th:href="@{/brands/brandDelete/{name}(name=${brand.name})}">Delete brand</a>
+        </div>
       </td>
     </tr>
     </tbody>

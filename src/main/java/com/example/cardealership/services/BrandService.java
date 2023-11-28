@@ -7,4 +7,5 @@ import java.util.List;
 public interface BrandService {
     public void addBrand(BrandDto brandDto);
     public List<BrandDto> allBrand();
+    public void removeBrand(String name);
 }

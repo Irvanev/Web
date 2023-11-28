@@ -33,4 +33,8 @@ public class ModelServiceImpl implements ModelService {
         return modelRepository.findAll().stream().map(model -> modelMapper.map(model, ModelDto.class))
                 .collect(Collectors.toList());
     }
+
+    public void removeModel(String name) {
+        modelRepository.deleteByName(name);
+    }
 }

@@ -29,5 +29,8 @@ public class BrandServiceImpl implements BrandService {
         return brandRepository.findAll().stream().map(brand -> modelMapper.map(brand, BrandDto.class))
                 .collect(Collectors.toList());
     }
+    public void removeBrand(String name) {
+        brandRepository.deleteByName(name);
+    }
 
 }

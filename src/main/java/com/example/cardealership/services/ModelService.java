@@ -7,4 +7,5 @@ import java.util.List;
 public interface ModelService {
     public void addModel(ModelDto modelDto);
     public List<ModelDto> allModels();
+    public void removeModel(String name);
 }
