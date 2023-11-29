@@ -64,7 +64,7 @@ public class OfferDto {
     }
 
     @NotEmpty(message = "URL of image cannot be null or empty!")
-    @Length(min = 10, max = 100, message = "URL of image must be more than 10 characters!")
+    @Length(min = 10, max = 200, message = "URL of image must be more than 10 characters!")
     public String getImageURL() {
         return imageURL;
     }

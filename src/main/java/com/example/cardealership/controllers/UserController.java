@@ -33,7 +33,7 @@ public class UserController {
 
     @GetMapping("/all")
     public String getAllUsers(Model model) {
-        model.addAttribute("users", userService.allUsers());
+        model.addAttribute("allUsers", userService.allUsers());
         model.addAttribute("availableRole", roleService.allRoles());
         return "users";
     }

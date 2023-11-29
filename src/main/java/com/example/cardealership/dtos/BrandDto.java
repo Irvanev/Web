@@ -1,5 +1,6 @@
 package com.example.cardealership.dtos;
 
+import com.example.cardealership.util.UniqueBrandName;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
@@ -7,6 +8,7 @@ import org.hibernate.validator.constraints.Length;
 import java.time.LocalDateTime;
 
 public class BrandDto {
+    @UniqueBrandName
     private String name;
     private LocalDateTime created;
     private LocalDateTime modified;

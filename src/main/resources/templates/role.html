@@ -1,57 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/users.css">
-</head>
+<head th:replace="fragments/head"></head>
 <body>
 
+<div th:replace="fragments/navbar">Navbar</div>
+
 <div class="container-md d-flex justify-content-center">
-    <nav class="navbar navbar-expand-md navbar-light" style="background-color: white;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/offers/all" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Заказы
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/users/all" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Пользователи
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/brands/all" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Список брендов
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/models/all" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Список моделей
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/roles/all" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Роли
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <h1>Roles</h1>
 </div>
 
 <div class="container-md d-flex justify-content-center">

@@ -1,6 +1,7 @@
 package com.example.cardealership.dtos;
 
 import com.example.cardealership.constants.RoleEnum;
+import com.example.cardealership.util.UniqueUserName;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 
 public class UserDto {
     private RoleEnum roleName;
+    @UniqueUserName
     private String userName;
     private String firstName;
     private String lastName;

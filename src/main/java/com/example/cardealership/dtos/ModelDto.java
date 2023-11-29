@@ -1,6 +1,7 @@
 package com.example.cardealership.dtos;
 
 import com.example.cardealership.constants.CategoryEnum;
+import com.example.cardealership.util.UniqueModelName;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 
 public class ModelDto {
     private String brandName;
+    @UniqueModelName
     private String name;
     private CategoryEnum categoryEnum;
     private String imageURL;

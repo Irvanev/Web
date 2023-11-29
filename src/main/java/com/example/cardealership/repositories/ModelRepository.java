@@ -1,6 +1,5 @@
 package com.example.cardealership.repositories;
 
-import com.example.cardealership.models.Brand;
 import com.example.cardealership.models.Model;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
