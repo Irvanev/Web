@@ -27,7 +27,7 @@ public class OfferServiceImpl implements OfferService {
     }
 
     public void addOffer(OfferDto offerDto) {
-        Offer offer  = modelMapper.map(offerDto, Offer.class);
+        Offer offer = modelMapper.map(offerDto, Offer.class);
         offer.setModel(modelRepository.findByName(offerDto.getModelName()).orElse(null));
         offer.setUsers(userRepository.findByUserName(offerDto.getUserName()).orElse(null));
 

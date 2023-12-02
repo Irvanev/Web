@@ -8,6 +8,7 @@ import com.example.cardealership.services.ModelService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,6 +25,8 @@ public class ModelServiceImpl implements ModelService {
     }
 
     public void addModel(ModelDto modelDto) {
+        modelDto.setCreated(LocalDateTime.now());
+        modelDto.setModified(LocalDateTime.now());
         Model model = modelMapper.map(modelDto, Model.class);
         model.setBrand(brandRepository.findByName(modelDto.getBrandName()).orElse(null));
 

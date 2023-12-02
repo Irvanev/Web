@@ -23,7 +23,6 @@ public class BrandDto {
         this.name = name;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getCreated() {
         return created;
     }
@@ -32,7 +31,6 @@ public class BrandDto {
         this.created = created;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getModified() {
         return modified;
     }
