@@ -112,7 +112,6 @@ public class OfferDto {
         this.year = year;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getCreated() {
         return created;
     }
@@ -121,7 +120,6 @@ public class OfferDto {
         this.created = created;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getModified() {
         return modified;
     }

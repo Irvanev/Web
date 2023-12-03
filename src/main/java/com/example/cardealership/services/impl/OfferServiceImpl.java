@@ -9,6 +9,7 @@ import com.example.cardealership.services.OfferService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,6 +28,8 @@ public class OfferServiceImpl implements OfferService {
     }
 
     public void addOffer(OfferDto offerDto) {
+        offerDto.setCreated(LocalDateTime.now());
+        offerDto.setModified(LocalDateTime.now());
         Offer offer = modelMapper.map(offerDto, Offer.class);
         offer.setModel(modelRepository.findByName(offerDto.getModelName()).orElse(null));
         offer.setUsers(userRepository.findByUserName(offerDto.getUserName()).orElse(null));

@@ -68,7 +68,6 @@ public class UserDto {
         this.password = password;
     }
 
-    @NotNull(message = "Please choose an online of user!")
     public boolean isActive() {
         return isActive;
     }
@@ -87,7 +86,6 @@ public class UserDto {
         this.imageURL = imageURL;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getCreated() {
         return created;
     }
@@ -96,7 +94,6 @@ public class UserDto {
         this.created = created;
     }
 
-    @NotNull(message = "Local date cannot be null or empty!")
     public LocalDateTime getModified() {
         return modified;
     }

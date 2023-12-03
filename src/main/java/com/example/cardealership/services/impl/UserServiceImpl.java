@@ -10,6 +10,7 @@ import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserService {
     }
 
     public void addUser(UserDto userDto) {
+        userDto.setCreated(LocalDateTime.now());
+        userDto.setModified(LocalDateTime.now());
+        userDto.setActive(false);
         Users users = modelMapper.map(userDto, Users.class);
         users.setRole(roleRepository.findByRoleEnum(userDto.getRoleName()).orElse(null));
 

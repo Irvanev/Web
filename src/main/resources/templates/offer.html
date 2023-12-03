@@ -180,18 +180,6 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="created" class="col-form-label">Created</label>
-                            <input type="datetime-local" class="form-control" id="created" th:field="*{created}" th:errorclass="is-invalid">
-                            <p th:if="${#fields.hasErrors('created')}" th:errors="*{created}">Error message</p>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="modified" class="col-form-label">Modified</label>
-                            <input type="datetime-local" class="form-control" id="modified" th:field="*{modified}" th:errorclass="is-invalid">
-                            <p th:if="${#fields.hasErrors('modified')}" th:errors="*{modified}">Error message</p>
-                        </div>
-
-                        <div class="mb-3">
                             <label for="url" class="col-form-label">Image URL</label>
                             <input type="text" class="form-control" id="url" th:field="*{imageURL}" th:errorclass="is-invalid">
                         </div>
